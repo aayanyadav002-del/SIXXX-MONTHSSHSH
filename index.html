@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f5e8dc">
+  <title>6 Months of Us ❤️</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="hearts-layer" aria-hidden="true"></div>
+
+  <main>
+    <section id="cover" class="screen">
+      <div class="cover-decoration deco-one">✦</div>
+      <div class="cover-decoration deco-two">♡</div>
+      <div class="scrapbook-cover">
+        <div class="cover-tape"></div>
+        <div class="cover-inner">
+          <p class="tiny-label">A LITTLE BOOK OF US</p>
+          <div class="cover-heart">♥</div>
+          <h1>6 Months<br><span>of Us</span></h1>
+          <p class="cover-subtitle">our memories, our laughs,<br>our little moments</p>
+          <p class="made-for">made just for you, <b>Rene</b></p>
+          <button id="open-btn" class="primary-btn">Open Our Story <span>→</span></button>
+        </div>
+      </div>
+    </section>
+
+    <section id="album" class="album-screen hidden">
+      <div class="topbar">
+        <div class="mini-title">♡ 6 MONTHS OF US</div>
+        <div class="top-actions">
+          <button id="memory-btn" class="icon-btn" title="Choose a page">☷ <span>Memories</span></button>
+          <button id="music-toggle" class="icon-btn" title="Music controls">♫ <span>Music</span></button>
+        </div>
+      </div>
+
+      <div id="music-panel" class="music-panel">
+        <div class="music-info">
+          <div class="record">♫</div>
+          <div>
+            <strong>Our Song</strong>
+            <small id="music-status">Tap play to start</small>
+          </div>
+        </div>
+        <button id="play-btn" class="round-control">▶</button>
+        <button id="mute-btn" class="round-control">🔊</button>
+        <input id="volume" type="range" min="0" max="1" step="0.01" value="0.55" aria-label="Volume">
+      </div>
+
+      <div class="album-wrap">
+        <button id="prev-btn" class="nav-btn left" aria-label="Previous page">←</button>
+
+        <div class="book" id="book" aria-live="polite">
+          <div id="left-page" class="page page-left"></div>
+          <div id="right-page" class="page page-right"></div>
+          <div class="book-spine"></div>
+        </div>
+
+        <button id="next-btn" class="nav-btn right" aria-label="Next page">→</button>
+      </div>
+
+      <div class="bottom-bar">
+        <button id="prev-bottom">← Previous</button>
+        <div class="page-count"><span id="page-number">1</span> / <span id="total-pages">10</span></div>
+        <button id="next-bottom">Next →</button>
+      </div>
+
+      <div id="memory-drawer" class="memory-drawer hidden">
+        <div class="drawer-card">
+          <button id="close-drawer" class="close-btn">×</button>
+          <p class="tiny-label">OUR LITTLE TIMELINE</p>
+          <h2>Choose a memory</h2>
+          <div id="page-thumbnails" class="thumbnails"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <audio id="bg-music" loop preload="auto">
+    <source src="music/our-song.mp3" type="audio/mpeg">
+  </audio>
+
+  <div id="toast" class="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
